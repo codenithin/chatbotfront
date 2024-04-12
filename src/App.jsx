@@ -5,7 +5,6 @@ import TableComponent from './components/TableComponent'
 import StartBubble from './components/StartBubble'
 
 function App() {
-  const BASE_URL = "http://localhost:3000"
   const chatRef = useRef(null)
   const currentResponeRef = useRef(null)
   const [bubbles, setBubbles] = useState([])
