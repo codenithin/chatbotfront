@@ -3,7 +3,7 @@ import TableComponent from './TableComponent'
 import ButtonGroup from './ButtonGroup'
 
 export default function BotRespoonse({ prompt, scroll }) {
-    const BASE_URL = ""
+    const BASE_URL = "http://localhost:3000"
     const [botRespoonse, setBotResponse] = useState("Thinking...")
     const [table, setTable] = useState(null)
     const fetchResponse = async (prompt) => {

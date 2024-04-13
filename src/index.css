@@ -2,20 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: 'main';
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
   font-style: normal;
-  font-weight: normal;
-  src: local('main'), url('./main.woff2') format('woff2');
-} */
+  font-variation-settings:
+    "slnt" 0;
+}
 
 @layer components {
   .botli {
     @apply max-w-4xl py-2 px-4 sm:px-6 lg:px-8 mx-auto flex gap-x-2 sm:gap-x-4
   }
+
   .botsvg {
     @apply flex-shrink-0 w-[2.375rem] h-[2.375rem] rounded-full
   }
+
   .trans {
     @apply transition-all duration-300
   }
