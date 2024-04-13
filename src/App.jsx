@@ -32,12 +32,12 @@ function App() {
   }, [bubbles])
   return (
     bubbles.length ? (
-      <div id='app' className='h-screen w-screen overflow-x-hidden'>
+      <div id='app' className='h-screen w-screen overflow-x-hidden dark:bg-[#1E1E1E]'>
         <div className="py-10 lg:py-14 min-h-[70%]">
           {/* <!-- Title --> */}
           <div className="max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto text-center">
 
-            <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl">
+            <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl dark:[#1E1E1E]">
               Welcome to Triniti AI
             </h1>
             <p className="mt-3 text-gray-600">
