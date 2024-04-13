@@ -4,6 +4,7 @@ import ButtonGroup from './ButtonGroup'
 
 export default function BotRespoonse({ prompt, scroll }) {
     const BASE_URL = "http://localhost:3000"
+    // const BASE_URL = ""
     const [botRespoonse, setBotResponse] = useState("Thinking...")
     const [table, setTable] = useState(null)
     const fetchResponse = async (prompt) => {
