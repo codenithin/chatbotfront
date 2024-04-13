@@ -18,6 +18,7 @@ export default function BotRespoonse({ prompt, scroll }) {
         })
         const response = await res.json()
         if (response.error) {
+            setBotResponse(response.error)
             return
         }
         setBotResponse(response.data.text)
@@ -57,7 +58,8 @@ export default function BotRespoonse({ prompt, scroll }) {
                 <div dangerouslySetInnerHTML={
                     { __html: table }
                 } id='table'></div>
-                <ButtonGroup />
+                
+                {table && <ButtonGroup />}
                 {/* {table && <TableComponent tableData={table} />} */}
             </div>
         </li>
