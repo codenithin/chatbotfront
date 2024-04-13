@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Welcome({bubbles, setBubbles, send, text, setText}) {
     return (
-        <div className="h-screen flex flex-col pb-6">
+        <div className="h-screen flex flex-col pb-6 dark:bg-[#1E1E1E]">
             <div className="h-full flex flex-col justify-center">
                 <div className="-mt-20 max-w-4xl w-full text-center mx-auto px-4 sm:px-6 lg:px-8">
                     

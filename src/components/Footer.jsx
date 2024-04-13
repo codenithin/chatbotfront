@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer({ text, setText, send }) {
     return (
-        <footer className="sticky bottom-0 z-10 bg-white border-t border-gray-200 pt-2 pb-3 sm:pt-4 sm:pb-6">
+        <footer className="sticky bottom-0 z-10 bg-white border-t border-gray-200 pt-2 pb-3 sm:pt-4 sm:pb-6 dark:bg-[#1E1E1E]">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center mb-3">
                     <button type="button" className="inline-flex justify-center items-center gap-x-2 rounded-lg font-medium text-gray-800 hover:text-blue-600 text-xs sm:text-sm">
