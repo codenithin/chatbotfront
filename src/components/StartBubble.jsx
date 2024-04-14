@@ -10,7 +10,7 @@ export default function StartBubble() {
                 <ellipse cx="19" cy="18.6554" rx="3.75" ry="3.6" fill="white" />
             </svg>
 
-            <div className="space-y-3">
+            <div className="space-y-3 mt-2">
                 <h2 className="font-medium text-gray-800 dark:text-white">
                     How can we help?
                 </h2>

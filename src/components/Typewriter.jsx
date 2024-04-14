@@ -14,10 +14,10 @@ const Typewriter = ({ text, delay, setReady, scroll }) => {
             setReady(false)
             return () => clearTimeout(timeout);
         } else {
+            setReady(true)
             setTimeout(() => {
-                setReady(true)
                 scroll()
-            }, 1000)
+            }, 100)
         }
     }, [currentIndex, delay, text]);
 
