@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import Chat from './page/Chat'
 import Welcome from './page/Welcome'
 import Sidebar from './components/Sidebar'
+import ContractBar from './components/ContractBar'
 
 function App() {
   const [bubbles, setBubbles] = useState([])
@@ -33,7 +34,7 @@ function App() {
   }, [bubbles])
   return (
     bubbles.length ? (
-      <div id='app' className='h-screen w-screen overflow-x-hidden dark:bg-[#1E1E1E]'>
+      <div id='app' className='h-screen w-screen overflow-x-hidden overflow-y-hidden dark:bg-[#1E1E1E]'>
         <Sidebar />
         <Chat
           chatRef={chatRef}
@@ -43,6 +44,8 @@ function App() {
           setText={setText}
           send={send}
         />
+        <ContractBar />
+
       </div>
     ) : (
       <Welcome bubbles={bubbles} setBubbles={setBubbles} send={send} text={text} setText={setText} />
