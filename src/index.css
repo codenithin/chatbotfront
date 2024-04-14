@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+html {
+  overflow-y: hidden;
+}
 body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -12,7 +14,7 @@ body {
 
 @layer components {
   .botli {
-    @apply max-w-4xl py-2 px-4 sm:px-6 lg:px-8 mx-auto flex gap-x-2 sm:gap-x-4
+    @apply max-w-[95%] py-2 px-4 sm:px-6 lg:px-8 mx-auto flex gap-x-2 sm:gap-x-4
   }
 
   .botsvg {

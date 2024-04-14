@@ -6,6 +6,7 @@ import StartBubble from './components/StartBubble'
 import Footer from './components/Footer'
 import Chat from './page/Chat'
 import Welcome from './page/Welcome'
+import Sidebar from './components/Sidebar'
 
 function App() {
   const [bubbles, setBubbles] = useState([])
@@ -33,32 +34,15 @@ function App() {
   return (
     bubbles.length ? (
       <div id='app' className='h-screen w-screen overflow-x-hidden dark:bg-[#1E1E1E]'>
-        <div className="py-10 lg:py-14 min-h-[70%]">
-          {/* <!-- Title --> */}
-          <div className="max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto text-center">
-
-            <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl dark:[#1E1E1E]">
-              Welcome to Triniti AI
-            </h1>
-            <p className="mt-3 text-gray-600">
-              Your AI-powered copilot for the web
-            </p>
-          </div>
-          {/* <!-- End Title --> */}
-
-          <ul ref={chatRef} className="mt-16 space-y-5" id="chat">
-            <StartBubble />
-            {bubbles}
-          </ul>
-        </div>
-
-        {/* <!-- Search --> */}
-        <Footer
+        <Sidebar />
+        <Chat
+          chatRef={chatRef}
+          bubbles={bubbles}
+          setBubbles={setBubbles}
           text={text}
           setText={setText}
           send={send}
         />
-
       </div>
     ) : (
       <Welcome bubbles={bubbles} setBubbles={setBubbles} send={send} text={text} setText={setText} />
