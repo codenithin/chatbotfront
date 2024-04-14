@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import TableComponent from './TableComponent'
 import ButtonGroup from './ButtonGroup'
 import Test from './Test'
-import { TypeAnimation } from 'react-type-animation'
 import Typewriter from './Typewriter'
 export default function BotRespoonse({ prompt, scroll }) {
     const responseRef = useRef(null)
