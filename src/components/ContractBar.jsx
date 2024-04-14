@@ -5,7 +5,7 @@ export default function ContractBar() {
         <div id="application-sidebar" className="
          transition-all duration-300 transform 
          hidden fixed 
-         top-0 start-[calc(100%-18rem)] bottom-0 z-[60] w-72
+         top-20 start-[calc(100%-18rem)] bottom-0 z-[60] w-72
           bg-white border-e border-gray-200 
           pt-7 pb-10 
           overflow-y-auto 
@@ -14,7 +14,7 @@ export default function ContractBar() {
           dark:[&::-webkit-scrollbar-track]:bg-slate-700 dark:[&::-webkit-scrollbar-thumb]:bg-slate-500 
           dark:bg-gray-800 dark:border-gray-700">
 
-            <div className='flex flex-col items-center justify-center h-full px-3'>
+            <div className='flex flex-col items-center justify-start h-full px-3 text-sm'>
 
                 <div className='relative flex flex-col justify-center items-center bg-white w-full py-5 rounded-xl border border-gray-200'>
 
@@ -26,7 +26,7 @@ export default function ContractBar() {
                             </span>
                         </div>
 
-                        <div className='font-medium text-lg'>
+                        <div className='font-medium text-base'>
                             Status
                         </div>
 
@@ -86,8 +86,8 @@ export default function ContractBar() {
                                     </svg>
                                 </span>
                                 <div class="block">
-                                    <h4 class="text-lg text-gray-500">Proposal submitted</h4>
-                                    <span class="text-sm text-gray-500">April 12</span>
+                                    <h4 class="text-base text-gray-500">Proposal submitted</h4>
+                                    <span class="text-xs text-gray-500">April 12</span>
                                 </div>
                             </a>
                         </li>
@@ -97,8 +97,8 @@ export default function ContractBar() {
                                     <svg className='w-6' xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" viewBox="0 0 24 24" role="img"><path vector-effect="non-scaling-stroke" stroke="var(--icon-color, #1F57C3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3h15m0 18H5m7.5-9C9.44 13.23 7 16.95 7 21h11c0-4.05-2.44-7.77-5.5-9zm0 0c3.06-1.23 5.5-4.95 5.5-9H7c0 4.05 2.44 7.77 5.5 9z"></path></svg>
                                 </span>
                                 <div class="block">
-                                    <h4 class="text-lg text-black">Contract offer</h4>
-                                    <span class="text-sm">Awaiting offer from client</span>
+                                    <h4 class="text-base text-black">Contract offer</h4>
+                                    <span class="text-xs">Awaiting offer from client</span>
                                 </div>
                             </a>
                         </li>
@@ -109,17 +109,17 @@ export default function ContractBar() {
                                     </svg>
                                 </span>
                                 <div class="block">
-                                    <h4 class="text-lg text-gray-500">Accept contract</h4>
+                                    <h4 class="text-base text-gray-500">Accept contract</h4>
                                 </div>
                             </a>
                         </li>
-                        <li class="relative flex-1 ">
+                        <li class="relative flex-1">
                             <a class="flex items-center font-medium w-full  ">
                                 <span class="w-8 h-8 bg-slate-50 border-2 border-gray-200 rounded-full flex justify-center items-center mr-3 text-sm  lg:w-10 lg:h-10">
                                     <svg className='w-6' xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-name="Layer 1" viewBox="0 0 24 24" role="img"><path fill="none" vector-effect="non-scaling-stroke" stroke="var(--icon-color, #676767)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.91 16.64a11.23 11.23 0 006.68-3.34c3-3 4.05-6.91 3.05-9.94-3-1-7 .09-9.94 3.05a11.23 11.23 0 00-3.34 6.68z"></path><path fill="none" vector-effect="non-scaling-stroke" stroke="var(--icon-color, #676767)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.34 8.19L3 10.53l4.36 2.56a10.56 10.56 0 011.51-4.34L6.7 7.9a1.27 1.27 0 00-1.36.29zm9.91 6.94a10.56 10.56 0 01-4.34 1.51L13.47 21l2.34-2.34a1.27 1.27 0 00.29-1.36z"></path><line x1="7.18" x2="4.45" y1="16.82" y2="19.55" fill="none" vector-effect="non-scaling-stroke" stroke="var(--icon-color, #676767)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></line><line x1="5.38" x2="3.57" y1="15.02" y2="16.84" fill="none" vector-effect="non-scaling-stroke" stroke="var(--icon-color, #676767)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></line><line x1="8.98" x2="7.16" y1="18.62" y2="20.43" fill="none" vector-effect="non-scaling-stroke" stroke="var(--icon-color, #676767)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></line><circle cx="14.54" cy="9.46" r="1.91" fill="none" vector-effect="non-scaling-stroke" stroke="var(--icon-color, #676767)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle></svg>
                                 </span>
                                 <div class="block">
-                                    <h4 class="text-lg  text-gray-500">Contract start</h4>
+                                    <h4 class="text-base  text-gray-500">Contract start</h4>
                                 </div>
                             </a>
                         </li>

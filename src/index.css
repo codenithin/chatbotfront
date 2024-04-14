@@ -11,7 +11,27 @@ body {
   font-variation-settings:
     "slnt" 0;
 }
-
+.open {
+  transform: translateX(0);
+}
+.close {
+  transform: translateX(100%);
+}
+.toggle-btn {
+  margin-bottom: 10px;
+}
+.typewriter p {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 10s steps(40, end),
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 @layer components {
   .botli {
     @apply max-w-[95%] py-2 px-4 sm:px-6 lg:px-8 mx-auto flex gap-x-2 sm:gap-x-4
