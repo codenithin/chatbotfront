@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import TableComponent from './TableComponent'
 import ButtonGroup from './ButtonGroup'
-
+import Test from './Test'
 export default function BotRespoonse({ prompt, scroll }) {
     const BASE_URL = "http://localhost:3000"
     // const BASE_URL = ""
@@ -48,7 +48,7 @@ export default function BotRespoonse({ prompt, scroll }) {
                 <ellipse cx="19" cy="18.6554" rx="3.75" ry="3.6" fill="white" />
             </svg>
 
-            <div className="grow max-w-[90%] md:max-w-2xl w-full space-y-3">
+            <div className="grow max-w-[90%] w-full space-y-3">
                 {/* <!-- Card --> */}
                 <div className="space-y-3">
                     <p className="text-sm text-gray-800">
@@ -60,7 +60,6 @@ export default function BotRespoonse({ prompt, scroll }) {
                     { __html: table }
                 } id='table'></div>
 
-                
 
                 {table && <ButtonGroup />}
                 {/* {table && <TableComponent tableData={table} />} */}
