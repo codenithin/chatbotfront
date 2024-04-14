@@ -5,8 +5,8 @@ import Test from './Test'
 import Typewriter from './Typewriter'
 export default function BotRespoonse({ prompt, scroll }) {
     const responseRef = useRef(null)
-    // const BASE_URL = "http://localhost:3000"
-    const BASE_URL = ""
+    const BASE_URL = "http://localhost:3000"
+    // const BASE_URL = ""
     const [botRespoonse, setBotResponse] = useState("")
     const [ready, setReady] = useState(false)
     const [table, setTable] = useState(null)
