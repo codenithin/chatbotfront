@@ -57,10 +57,10 @@ export default function BotRespoonse({ prompt, scroll }) {
                 <ellipse cx="19" cy="18.6554" rx="3.75" ry="3.6" fill="white" />
             </svg>
 
-            <div className="grow max-w-[90%] w-full space-y-3">
+            <div className="grow max-w-[90%] w-full space-y-3 mt-2">
                 {/* <!-- Card --> */}
                 <div ref={responseRef} className="space-y-3">
-                    <p className="text-sm text-gray-800">
+                    <p className="text-gray-800">
                         <Typewriter setReady={setReady} text={botRespoonse} delay={30} scroll={scroll} />
                     </p>
                 </div>
