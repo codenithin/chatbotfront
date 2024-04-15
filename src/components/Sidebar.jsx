@@ -186,6 +186,13 @@ export default function Sidebar() {
                         </a></li>
                     </ul>
                 </nav>
+                <div className='fixed bottom-4 flex justify-start border-t pt-4 items-center w-full'>
+                    <img className='w-14 ml-6' src="../../149071.png" alt="" />
+                    <div className='ml-4'>
+                        <div className='text-xl font-bold'>Nithin Kumar</div>
+                        <div className='text-xs'>Administrator</div>
+                    </div>
+                </div>
             </div>
         </div>
     )
