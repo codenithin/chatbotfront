@@ -10,7 +10,7 @@ import SingleLineChart from './charts/SingleLineChart'
 import DoubleLineChart from './charts/DoubleLineChart'
 export default function BotRespoonse({ prompt, scroll }) {
     const responseRef = useRef(null)
-    const BASE_URL = "http://localhost:3000"
+    const BASE_URL = "http://localhost:3001"
     // const BASE_URL = ""
     const [botRespoonse, setBotResponse] = useState("")
     const [ready, setReady] = useState(false)
