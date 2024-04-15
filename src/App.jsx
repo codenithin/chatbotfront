@@ -30,7 +30,11 @@ function App() {
     }
   }
   const scroll = () => {
-    responseRef.current?.scrollIntoView({behavior: "smooth"})
+    const div = document.getElementById('chat');
+    if (div) {
+      const offset = responseRef.current?.offsetTop
+      div.scrollTop = offset
+    }
   }
   useEffect(() => {
     scroll()
