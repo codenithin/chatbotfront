@@ -12,6 +12,7 @@ import RightBar from './components/RightBar'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const responseRef = useRef(null)
   const [bubbles, setBubbles] = useState([])
   const chatRef = useRef(null)
   const currentResponeRef = useRef(null)
@@ -24,15 +25,12 @@ function App() {
       setBubbles(prev => [...prev, <ChatBubble key={Math.random()} text={text} />])
       setText("")
       setTimeout(() => {
-        setBubbles(prev => [...prev, <div ref={currentResponeRef} key={Math.random()}><BotRespoonse scroll={scroll} prompt={text} /></div>])
+        setBubbles(prev => [...prev, <div ref={currentResponeRef} key={Math.random()}><BotRespoonse scroll={scroll} prompt={text} responseRef={responseRef} /></div>])
       }, 500)
     }
   }
   const scroll = () => {
-    const div = document.getElementById('chat');
-    if (div) {
-      div.scrollTop = div.scrollHeight
-    }
+    responseRef.current?.scrollIntoView({behavior: "smooth"})
   }
   useEffect(() => {
     scroll()

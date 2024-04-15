@@ -8,8 +8,8 @@ import SingleBarChart from './charts/SingleBarChart'
 import DoubleBarChart from './charts/DoubleBarChart'
 import SingleLineChart from './charts/SingleLineChart'
 import DoubleLineChart from './charts/DoubleLineChart'
-export default function BotRespoonse({ prompt, scroll }) {
-    const responseRef = useRef(null)
+import Form from './Form'
+export default function BotRespoonse({ prompt, scroll, responseRef }) {
     const BASE_URL = "http://localhost:3001"
     // const BASE_URL = ""
     const [botRespoonse, setBotResponse] = useState("")
@@ -47,7 +47,7 @@ export default function BotRespoonse({ prompt, scroll }) {
     }, [])
 
     return (
-        <li className="botli">
+        <li ref={responseRef} className="botli">
             <svg className="botsvg" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="38" height="38" rx="6" fill="#2563EB" />
                 <path d="M10 28V18.64C10 13.8683 14.0294 10 19 10C23.9706 10 28 13.8683 28 18.64C28 23.4117 23.9706 27.28 19 27.28H18.25" stroke="white" strokeWidth="1.5" />
@@ -57,7 +57,7 @@ export default function BotRespoonse({ prompt, scroll }) {
 
             <div className="grow max-w-[90%] w-full space-y-3 mt-2">
                 {/* <!-- Card --> */}
-                <div ref={responseRef} className="space-y-3">
+                <div className="space-y-3">
                     <p className="text-gray-800">
                         <Typewriter setReady={setReady} text={botRespoonse} delay={30} scroll={scroll} />
                     </p>
@@ -74,11 +74,11 @@ export default function BotRespoonse({ prompt, scroll }) {
                         {resopnseType == 'double-bar-chart' && <DoubleBarChart />}
                         {resopnseType == 'single-line-chart' && <SingleLineChart />}
                         {resopnseType == 'double-line-chart' && <DoubleLineChart />}
+                        {resopnseType == 'form' && <Form />}
                     </div>
                 )}
-                {/* <Chart /> */}
                 {/* <Test /> */}
-
+                
                 {table && <ButtonGroup />}
                 {/* {table && <TableComponent tableData={table} />} */}
             </div>
