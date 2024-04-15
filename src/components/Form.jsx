@@ -1,13 +1,13 @@
 import React from 'react'
 
-export default function Test() {
+export default function Form() {
     return (
         <div class="max-w-[100%] py-2 sm:px-6 mx-auto">
             <form>
                 <div class="bg-white rounded-xl shadow-lg dark:bg-neutral-900 border-2 pt-5">
                     <div class="pt-0 p-4 sm:pt-0 sm:p-7">
                         <div class="space-y-4 sm:space-y-6">
-                            
+
 
                             <div class="space-y-2">
                                 <label for="af-submit-app-project-name" class="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-neutral-200">
@@ -59,6 +59,5 @@ export default function Test() {
                 </div>
             </form>
         </div>
-
     )
 }
