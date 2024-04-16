@@ -17,8 +17,8 @@ import VendorThankYou from './VendorThankYou'
 import Strategy from './Strategy'
 import Compare from './Compare'
 export default function BotRespoonse({ prompt, scroll, responseRef, send, setYesMessage, scrollToBottom }) {
-    const BASE_URL = "http://localhost:3001"
-    // const BASE_URL = ""
+    // const BASE_URL = "http://localhost:3001"
+    const BASE_URL = ""
     const [botRespoonse, setBotResponse] = useState("")
     const [error, setError] = useState(false)
     const [ready, setReady] = useState(false)
