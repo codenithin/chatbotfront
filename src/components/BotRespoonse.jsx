@@ -9,13 +9,24 @@ import DoubleBarChart from './charts/DoubleBarChart'
 import SingleLineChart from './charts/SingleLineChart'
 import DoubleLineChart from './charts/DoubleLineChart'
 import Form from './Form'
-export default function BotRespoonse({ prompt, scroll, responseRef }) {
+import Link from './Link'
+import FourLineChart from './charts/FourLineChart'
+import List from './List'
+import VendorResponse from './VendorResponse'
+import VendorThankYou from './VendorThankYou'
+import Strategy from './Strategy'
+import Compare from './Compare'
+export default function BotRespoonse({ prompt, scroll, responseRef, send, setYesMessage, scrollToBottom }) {
     const BASE_URL = "http://localhost:3001"
     // const BASE_URL = ""
     const [botRespoonse, setBotResponse] = useState("")
+    const [error, setError] = useState(false)
     const [ready, setReady] = useState(false)
+    const [renderList, setRenderList] = useState(false)
     const [table, setTable] = useState(null)
     const [resopnseType, setResponseType] = useState('text')
+    const [to, setTo] = useState('to')
+    const [list, setList] = useState()
     const fetchResponse = async (prompt) => {
         const res = await fetch(BASE_URL + '/send', {
             method: "POST",
@@ -29,11 +40,15 @@ export default function BotRespoonse({ prompt, scroll, responseRef }) {
         const response = await res.json()
         if (response.error) {
             setBotResponse(response.error)
+            setError(true)
             return
         }
         setBotResponse(response.data.text)
         setTable(response.data.table)
         setResponseType(response.data.type)
+        setTo(response.data.to)
+        setList(response.data.list)
+        setYesMessage(response.data.yesMessage)
 
     }
     useEffect(() => {
@@ -74,10 +89,18 @@ export default function BotRespoonse({ prompt, scroll, responseRef }) {
                         {resopnseType == 'double-bar-chart' && <DoubleBarChart />}
                         {resopnseType == 'single-line-chart' && <SingleLineChart />}
                         {resopnseType == 'double-line-chart' && <DoubleLineChart />}
+                        {resopnseType == '4-line-chart' && <FourLineChart />}
                         {resopnseType == 'form' && <Form />}
+                        {resopnseType == 'link' && <Link send={send} to={to} />}
+                        {resopnseType == 'vendor-proposal' && <VendorResponse setReady={setRenderList} scroll={scrollToBottom} />}
+                        {resopnseType == 'vendor-thankyou' && <VendorThankYou setReady={setRenderList} scroll={scrollToBottom} />}
+                        {resopnseType == 'strategy' && <Strategy setReady={setRenderList} scroll={scrollToBottom} />}
+                        {resopnseType == 'compare' && <Compare />}
+                        {(renderList && list) && <List list={list} />}
                     </div>
                 )}
                 {/* <Test /> */}
+                
                 
                 {table && <ButtonGroup />}
                 {/* {table && <TableComponent tableData={table} />} */}

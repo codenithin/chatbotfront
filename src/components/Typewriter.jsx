@@ -10,11 +10,14 @@ const Typewriter = ({ text, delay, setReady, scroll }) => {
             const timeout = setTimeout(() => {
                 setCurrentText(prevText => prevText + text[currentIndex]);
                 setCurrentIndex(prevIndex => prevIndex + 1);
+                if(text[currentIndex] == '\n') {
+                    scroll()
+                }
             }, delay);
-            setReady(false)
+            setReady && setReady(false)
             return () => clearTimeout(timeout);
         } else {
-            setReady(true)
+            setReady && setReady(true)
             setTimeout(() => {
                 scroll()
             }, 100)

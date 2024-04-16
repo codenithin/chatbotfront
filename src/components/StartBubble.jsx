@@ -12,23 +12,27 @@ export default function StartBubble() {
 
             <div className="space-y-3 mt-2">
                 <h2 className="font-medium text-gray-800 dark:text-white">
-                    How can we help?
+                    How can I help you?
                 </h2>
                 <div className="space-y-1.5">
                     <p className="mb-1.5 text-sm text-gray-800 dark:text-white">
-                        You can ask questions like:
+                        You can try typing:
                     </p>
                     <ul className="list-disc list-outside space-y-1.5 ps-3.5">
                         <li className="text-sm text-gray-800 dark:text-white">
-                            What's Preline UI?
+                            List typical requirements for a sourcing software.
                         </li>
 
                         <li className="text-sm text-gray-800 dark:text-white">
-                            How many Starter Pages & Examples are there?
+                            Can you list possible vendors for a sourcing software?
                         </li>
 
                         <li className="text-sm text-gray-800 dark:text-white">
-                            Is there a PRO version?
+                            Can you generate me an RFP?
+                        </li>
+
+                        <li className="text-sm text-gray-800 dark:text-white">
+                            Can you help me compare vendors?
                         </li>
                     </ul>
                 </div>

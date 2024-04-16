@@ -1,6 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-export default function Sidebar() {
+export default function Sidebar({selected}) {
+    useEffect(() => {
+        const dashboardAnchor = document.getElementById('dashboard')
+        const askAnchor = document.getElementById('ask')
+        if(selected == 'dashboard') {
+            askAnchor.classList.remove('bg-gray-100')
+            dashboardAnchor.classList.add('bg-gray-100')
+        }else {
+            dashboardAnchor.classList.remove('bg-gray-100')
+            askAnchor.classList.add('bg-gray-100')
+        }
+    }, [])
     return (
         <div>
             <div className="sticky top-0 inset-x-0 z-20 bg-white border-y px-4 sm:px-6 md:px-8 lg:hidden dark:bg-gray-800 dark:border-gray-700">
@@ -34,7 +45,7 @@ export default function Sidebar() {
                 <nav className="hs-accordion-group p-6 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
                     <ul className="space-y-1.5">
                         <li>
-                            <a className="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-900 dark:text-white" href="#">
+                            <a id='dashboard' className="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-900 dark:text-white" href="/dashboard">
                                 <svg className="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
                                 Dashboard
                             </a>
@@ -184,13 +195,17 @@ export default function Sidebar() {
                             <svg className="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>
                             Documentation
                         </a></li>
+                        <li><a id='ask' className="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300" href="/">
+                            <svg class="flex-shrink-0 size-4 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"></path><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"></path></svg>
+                            Ask Triniti
+                        </a></li>
                     </ul>
                 </nav>
                 <div className='fixed bottom-4 flex justify-start border-t pt-4 items-center w-full'>
                     <img className='w-14 ml-6' src="../../149071.png" alt="" />
                     <div className='ml-4'>
-                        <div className='text-xl font-bold'>Nithin Kumar</div>
-                        <div className='text-xs'>Administrator</div>
+                        <div className='text-lg font-bold'>David Harrison</div>
+                        <div className='text-xs'>IT Sourcing Manager</div>
                     </div>
                 </div>
             </div>
