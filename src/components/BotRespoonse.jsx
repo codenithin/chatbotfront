@@ -16,9 +16,10 @@ import VendorResponse from './VendorResponse'
 import VendorThankYou from './VendorThankYou'
 import Strategy from './Strategy'
 import Compare from './Compare'
+import SourcingOptions from './SourcingOptions'
 export default function BotRespoonse({ prompt, scroll, responseRef, send, setYesMessage, scrollToBottom }) {
-    // const BASE_URL = "http://localhost:3001"
-    const BASE_URL = ""
+    const BASE_URL = "http://localhost:3000"
+    // const BASE_URL = ""
     const [botRespoonse, setBotResponse] = useState("")
     const [error, setError] = useState(false)
     const [ready, setReady] = useState(false)
@@ -96,12 +97,13 @@ export default function BotRespoonse({ prompt, scroll, responseRef, send, setYes
                         {resopnseType == 'vendor-thankyou' && <VendorThankYou setReady={setRenderList} scroll={scrollToBottom} />}
                         {resopnseType == 'strategy' && <Strategy setReady={setRenderList} scroll={scrollToBottom} />}
                         {resopnseType == 'compare' && <Compare />}
+                        {resopnseType == 'sourcing-options' && <SourcingOptions />}
                         {(renderList && list) && <List list={list} />}
                     </div>
                 )}
-                {/* <Test /> */}
-                
-                
+                <Test />
+
+
                 {table && <ButtonGroup />}
                 {/* {table && <TableComponent tableData={table} />} */}
             </div>
