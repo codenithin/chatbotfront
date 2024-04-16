@@ -16,7 +16,7 @@ export default function Chat({ bubbles, setBubbles, chatRef, text, setText, send
                         Welcome to Triniti AI
                     </h1>
                     <p className="mt-3 text-gray-600">
-                        Your AI-powered copilot for the web
+                        Your AI-powered procurement assistant
                     </p>
                 </div>
                 {/* <!-- End Title --> */}
