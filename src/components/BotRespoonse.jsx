@@ -18,7 +18,7 @@ import Strategy from './Strategy'
 import Compare from './Compare'
 import SourcingOptions from './SourcingOptions'
 export default function BotRespoonse({ prompt, scroll, responseRef, send, setYesMessage, scrollToBottom }) {
-    const BASE_URL = "http://localhost:3000"
+    const BASE_URL = "https://chatbot-backend-1e93.onrender.com"
     // const BASE_URL = ""
     const [botRespoonse, setBotResponse] = useState("")
     const [error, setError] = useState(false)
