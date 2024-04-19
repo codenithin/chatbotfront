@@ -16,7 +16,6 @@ import VendorResponse from './VendorResponse'
 import VendorThankYou from './VendorThankYou'
 import Strategy from './Strategy'
 import Compare from './Compare'
-import SourcingOptions from './SourcingOptions'
 export default function BotRespoonse({ prompt, scroll, responseRef, send, setYesMessage, scrollToBottom }) {
     const BASE_URL = "http://localhost:3000"
     // const BASE_URL = ""
