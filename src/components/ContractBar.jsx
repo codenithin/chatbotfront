@@ -11,8 +11,7 @@ export default function ContractBar() {
           overflow-y-auto 
           lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 
           [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 
-          dark:[&::-webkit-scrollbar-track]:bg-slate-700 dark:[&::-webkit-scrollbar-thumb]:bg-slate-500 
-          dark:bg-gray-800 dark:border-gray-700">
+          ">
 
             <div className='flex flex-col items-center justify-start h-full px-3 text-sm'>
 
@@ -37,9 +36,9 @@ export default function ContractBar() {
                         </div>
                     </div>
                     {/* 
-                    <ol className="relative text-gray-500 border-s-2 border-[#1F57C3] dark:border-gray-700 dark:text-gray-400">
+                    <ol className="relative text-gray-500 border-s-2 border-[#1F57C3] ">
                         <li className="mb-10 ms-6 ">
-                            <span className="absolute flex items-center justify-center w-8 h-8 bg-[#1F57C3] rounded-full -start-4 ring-4 ring-white dark:ring-gray-900 dark:bg-green-900">
+                            <span className="absolute flex items-center justify-center w-8 h-8 bg-[#1F57C3] rounded-full -start-4 ring-4 ring-white ">
                                 <svg className="w-3.5 h-3.5 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5" />
                                 </svg>
@@ -48,7 +47,7 @@ export default function ContractBar() {
                             <p className="text-sm">April 12</p>
                         </li>
                         <li className="mb-10 ms-6 ">
-                            <span className="absolute flex items-center justify-center w-8 h-8 bg-[#1F57C3] rounded-full -start-4 ring-4 ring-white dark:ring-gray-900 dark:bg-green-900">
+                            <span className="absolute flex items-center justify-center w-8 h-8 bg-[#1F57C3] rounded-full -start-4 ring-4 ring-white ">
                                 <svg className="w-3.5 h-3.5 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5" />
                                 </svg>
@@ -57,8 +56,8 @@ export default function ContractBar() {
                             <p className="text-sm">Awaiting offer from client</p>
                         </li>
                         <li className="mb-10 ms-6">
-                            <span className="absolute flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full -start-4 ring-4 ring-white dark:ring-gray-900 dark:bg-gray-700">
-                                <svg className="w-3.5 h-3.5 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                            <span className="absolute flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full -start-4 ring-4 ring-white ">
+                                <svg className="w-3.5 h-3.5 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
                                     <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z" />
                                 </svg>
                             </span>
@@ -66,8 +65,8 @@ export default function ContractBar() {
                             <p className="text-sm">Step details here</p>
                         </li>
                         <li className="ms-6">
-                            <span className="absolute flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full -start-4 ring-4 ring-white dark:ring-gray-900 dark:bg-gray-700">
-                                <svg className="w-3.5 h-3.5 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                            <span className="absolute flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full -start-4 ring-4 ring-white ">
+                                <svg className="w-3.5 h-3.5 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
                                     <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2ZM7 2h4v3H7V2Zm5.7 8.289-3.975 3.857a1 1 0 0 1-1.393 0L5.3 12.182a1.002 1.002 0 1 1 1.4-1.436l1.328 1.289 3.28-3.181a1 1 0 1 1 1.392 1.435Z" />
                                 </svg>
                             </span>

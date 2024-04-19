@@ -7,7 +7,7 @@ export default function TextImageCell({text, smallText, image}) {
                     <div class="flex items-center gap-x-2">
                       <img className='w-6' src={image} alt="" />
                       <div class="grow">
-                        <span class="text-sm text-gray-600 dark:text-neutral-400">{text}</span>
+                        <span class="text-sm text-gray-600  ">{text}</span>
                       </div>
                     </div>
                   </div>

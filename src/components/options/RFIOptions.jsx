@@ -9,8 +9,7 @@ export default function RFIOptions() {
           overflow-y-auto w-full
           lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 
           [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 
-          dark:[&::-webkit-scrollbar-track]:bg-slate-700 dark:[&::-webkit-scrollbar-thumb]:bg-slate-500 
-          dark:bg-gray-800 dark:border-gray-700">
+          ">
 
             <div className='flex flex-col items-center justify-start w-full h-full px-3 text-sm'>
                 <div className='text-black relative flex flex-col justify-center items-center bg-white w-full py-5 rounded-xl'>
