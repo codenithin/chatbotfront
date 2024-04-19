@@ -28,7 +28,7 @@ export default function Footer({ text, setText, send }) {
                             e.preventDefault();
                             send();
                         }
-                    }} id="input-area" className="p-4 pb-12 block w-full border focus:ring focus:border-0 border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Ask me anything..."></textarea>
+                    }} id="input-area" className="focus:outline-none p-4 pb-12 block w-full border focus:ring focus:border-0 border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Ask me anything..."></textarea>
 
                     {/* <!-- Toolbar --> */}
                     <div className="absolute bottom-px inset-x-px p-2 rounded-b-md bg-white">

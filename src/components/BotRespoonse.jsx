@@ -6,7 +6,6 @@ import Typewriter from './Typewriter'
 import Form from './form/Form'
 import BASE_URL from '../config'
 import LargeText from './largeText/LargeText'
-import VendorResponse from './VendorResponse'
 import Chart from './charts/Chart'
 import Actions from './actions/Actions'
 export default function BotRespoonse({ prompt, scroll, responseRef, send, setYesMessage, scrollToBottom }) {
@@ -99,7 +98,7 @@ export default function BotRespoonse({ prompt, scroll, responseRef, send, setYes
                         )}
                     </div>
                 )}
-                {/* <Test /> */}
+                <Test />
                 <ButtonGroup />
             </div>
         </li>
