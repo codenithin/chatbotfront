@@ -10,6 +10,7 @@ import Chart from './charts/Chart'
 import Actions from './actions/Actions'
 import SourcingOptions from './options/SourcingOptions'
 import Test from './Test'
+import Compare from './compare/Compare'
 export default function BotRespoonse({ prompt, scroll, responseRef, send, setYesMessage, scrollToBottom }) {
 
     const [botRespoonse, setBotResponse] = useState("")
@@ -91,6 +92,7 @@ export default function BotRespoonse({ prompt, scroll, responseRef, send, setYes
                             {resopnseType == 'CHART' && <Chart chartType={data.chartType} series={data.series} options={data.options} height={data.height} width={data.width} />}
                             {resopnseType == 'ACTIONS' && <Actions actions={data.actions} />}
                             {resopnseType == 'OPTIONS' && <SourcingOptions options={data} />}
+                            {resopnseType == 'COMPARE' && <Compare title={data.title} header={data.header} sections={data.sections} />}
                         </div>
                         {(bottomText && showBottomText) && (
                             <div className="space-y-3 mt-10">
