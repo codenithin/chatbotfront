@@ -46,7 +46,7 @@ export default function BotRespoonse({ prompt, scroll, responseRef, send, setYes
         if(response.data.type == "LARGETEXT") {
             setTimeout(() => {
                 setShowBottomText(true)
-            }, response.data.largeText.length * 3)
+            }, response.data.largeText.length * 5)
         }else {
             setShowBottomText(true)
         }
@@ -95,9 +95,9 @@ export default function BotRespoonse({ prompt, scroll, responseRef, send, setYes
                             {resopnseType == 'COMPARE' && <Compare title={data.title} header={data.header} sections={data.sections} />}
                         </div>
                         {(bottomText && showBottomText) && (
-                            <div className="space-y-3 mt-10">
+                            <div className="space-y-3">
                                 <p className="text-gray-800">
-                                    <Typewriter text={bottomText} delay={30} scroll={scroll} />
+                                    <Typewriter text={bottomText} delay={30} />
                                 </p>
                             </div>
                         )}
