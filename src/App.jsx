@@ -1,13 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import ChatBubble from './components/ChatBubble'
 import BotRespoonse from './components/BotRespoonse'
-import TableComponent from './components/TableComponent'
-import StartBubble from './components/StartBubble'
-import Footer from './components/Footer'
 import Chat from './page/Chat'
-import Welcome from './page/Welcome'
 import Sidebar from './components/Sidebar'
-import ContractBar from './components/ContractBar'
 import RightBar from './components/RightBar'
 
 function App() {

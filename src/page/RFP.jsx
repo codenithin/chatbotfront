@@ -1,32 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { useRef } from 'react'
 import Form from '../components/form/Form';
+import BASE_URL from '../config';
 
-const json = [
-    "Please provide details about your company's experience in developing talent acquisition systems:",
-    "How will your solution ensure seamless integration with our existing HR management systems?",
-    "Can you provide examples of similar projects you have successfully delivered in the past?",
-    "How does your solution address data security and compliance requirements?",
-    "What level of ongoing support and maintenance can we expect after implementation?",
-    "How does your solution handle candidate data privacy?",
-    "What measures do you have in place for system scalability?",
-    "How do you ensure the reliability and performance of your system?",
-    "Can you describe your approach to user training and onboarding?",
-    "How does your solution handle multilingual support?",
-    "What customization options are available in your solution?",
-    "How do you handle system updates and upgrades?",
-    "Can you provide details on your disaster recovery and backup strategies?",
-]
 
 export default function RFP() {
 
     const formRef = useRef(null);
-
-    useEffect(() => {
+    const [rfpQuestions, setRFPQuestions] = useState([]);
+    const [title, setTitle] = useState("");
+    async function fetchRFP() {
+        const res = await fetch(BASE_URL + '/send', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                prompt: "generate RFP"
+            })
+        })
+        const response = await res.json()
+        if (response.error) {
+            return
+        }
+        setTitle(response.data.title)
+        setRFPQuestions(response.data.questions)
+    }
+    function scroll() {
         formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
+    }
+    useEffect(() => {
+        fetchRFP()
     }, [])
+    useEffect(() => {
+        scroll()
+    }, [title])
 
     return (
         <div className='w-screem h-screen overflow-y-scroll'>
@@ -131,7 +141,7 @@ export default function RFP() {
             </div>
 
             <div ref={formRef}>
-                <Form questions={json} />
+                <Form questions={rfpQuestions} title={title} />
             </div>
 
         </div>
