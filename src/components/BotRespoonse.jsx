@@ -1,33 +1,21 @@
 import React, { useEffect, useRef, useState } from 'react'
-import TableComponent from './TableComponent'
+import TableComponent from './table/TableComponent'
 import ButtonGroup from './ButtonGroup'
-import Test from './Test'
 // import responses from './responses'
 import Typewriter from './Typewriter'
-import SingleBarChart from './charts/SingleBarChart'
-import DoubleBarChart from './charts/DoubleBarChart'
-import SingleLineChart from './charts/SingleLineChart'
-import DoubleLineChart from './charts/DoubleLineChart'
-import Form from './Form'
-import Link from './Link'
-import FourLineChart from './charts/FourLineChart'
-import List from './List'
+import Form from './form/Form'
+import BASE_URL from '../config'
+import LargeText from './largeText/LargeText'
 import VendorResponse from './VendorResponse'
-import VendorThankYou from './VendorThankYou'
-import Strategy from './Strategy'
-import Compare from './Compare'
-import SourcingOptions from './SourcingOptions'
+import Chart from './charts/Chart'
 export default function BotRespoonse({ prompt, scroll, responseRef, send, setYesMessage, scrollToBottom }) {
-    const BASE_URL = "http://localhost:3000"
-    // const BASE_URL = ""
+
     const [botRespoonse, setBotResponse] = useState("")
     const [error, setError] = useState(false)
     const [ready, setReady] = useState(false)
-    const [renderList, setRenderList] = useState(false)
     const [data, setData] = useState(null)
     const [resopnseType, setResponseType] = useState('text')
     const [to, setTo] = useState('to')
-    const [list, setList] = useState()
     const fetchResponse = async (prompt) => {
         const res = await fetch(BASE_URL + '/send', {
             method: "POST",
@@ -48,7 +36,6 @@ export default function BotRespoonse({ prompt, scroll, responseRef, send, setYes
         setData(response.data)
         setResponseType(response.data.type)
         setTo(response.data.to)
-        setList(response.data.list)
         setYesMessage(response.data.yesMessage)
 
     }
@@ -81,7 +68,17 @@ export default function BotRespoonse({ prompt, scroll, responseRef, send, setYes
                 {/* <!-- End Card --> */}
                 {ready && (
                     <div>
-                        {resopnseType == 'TABLE' && <TableComponent tableData={data.table} />}
+                        {/* <div dangerouslySetInnerHTML={
+                            { __html: "<div>anas</div>" }
+                        } id='table'></div> */}
+
+                        <div>
+                            {resopnseType == 'TABLE' && <TableComponent tableData={data.table} />}
+                            {resopnseType == 'FORM' && <Form title={data.title} questions={data.questions} />}
+                            {resopnseType == 'LARGETEXT' && <LargeText text={data.largeText} scroll={scrollToBottom} />}
+                            {resopnseType == 'CHART' && <Chart chartType={data.chartType} series={data.series} options={data.options} height={data.height} width={data.width} />}
+                            {resopnseType == 'ACTIONS' && <Chart chartType={data.chartType} series={data.series} options={data.options} height={data.height} width={data.width} />}
+                        </div>
                     </div>
                 )}
                 {/* <Test /> */}

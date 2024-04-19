@@ -89,9 +89,6 @@ export default function SourcingOptions() {
                     </div>
                 </div>
             </div>
-            <div className='mt-5'>
-                <ButtonGroup />
-            </div>
         </div>
     )
 }
