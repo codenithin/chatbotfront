@@ -8,12 +8,15 @@ import BASE_URL from '../config'
 import LargeText from './largeText/LargeText'
 import VendorResponse from './VendorResponse'
 import Chart from './charts/Chart'
+import Actions from './actions/Actions'
 export default function BotRespoonse({ prompt, scroll, responseRef, send, setYesMessage, scrollToBottom }) {
 
     const [botRespoonse, setBotResponse] = useState("")
     const [error, setError] = useState(false)
     const [ready, setReady] = useState(false)
     const [data, setData] = useState(null)
+    const [showBottomText, setShowBottomText] = useState(false)
+    const [bottomText, setBottomText] = useState("")
     const [resopnseType, setResponseType] = useState('text')
     const [to, setTo] = useState('to')
     const fetchResponse = async (prompt) => {
@@ -36,7 +39,15 @@ export default function BotRespoonse({ prompt, scroll, responseRef, send, setYes
         setData(response.data)
         setResponseType(response.data.type)
         setTo(response.data.to)
-        setYesMessage(response.data.yesMessage)
+        setYesMessage(response.data.yes)
+        setBottomText(response.data.bottomText)
+        if(response.data.type == "LARGETEXT") {
+            setTimeout(() => {
+                setShowBottomText(true)
+            }, response.data.largeText.length * 3)
+        }else {
+            setShowBottomText(true)
+        }
 
     }
     useEffect(() => {
@@ -75,10 +86,17 @@ export default function BotRespoonse({ prompt, scroll, responseRef, send, setYes
                         <div>
                             {resopnseType == 'TABLE' && <TableComponent tableData={data.table} />}
                             {resopnseType == 'FORM' && <Form title={data.title} questions={data.questions} />}
-                            {resopnseType == 'LARGETEXT' && <LargeText text={data.largeText} scroll={scrollToBottom} />}
+                            {resopnseType == 'LARGETEXT' && <LargeText setShowBottomText={setShowBottomText} text={data.largeText} scroll={scrollToBottom} />}
                             {resopnseType == 'CHART' && <Chart chartType={data.chartType} series={data.series} options={data.options} height={data.height} width={data.width} />}
-                            {resopnseType == 'ACTIONS' && <Chart chartType={data.chartType} series={data.series} options={data.options} height={data.height} width={data.width} />}
+                            {resopnseType == 'ACTIONS' && <Actions actions={data.actions} />}
                         </div>
+                        {(bottomText && showBottomText) && (
+                            <div className="space-y-3 mt-10">
+                                <p className="text-gray-800">
+                                    <Typewriter text={bottomText} delay={30} scroll={scroll} />
+                                </p>
+                            </div>
+                        )}
                     </div>
                 )}
                 {/* <Test /> */}
