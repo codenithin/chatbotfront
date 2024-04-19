@@ -11,7 +11,7 @@ const Typewriter = ({ text, delay, setReady, scroll }) => {
                 setCurrentText(prevText => prevText + text[currentIndex]);
                 setCurrentIndex(prevIndex => prevIndex + 1);
                 if(text[currentIndex] == '\n') {
-                    scroll()
+                    scroll && scroll()
                 }
             }, delay);
             setReady && setReady(false)
@@ -19,7 +19,7 @@ const Typewriter = ({ text, delay, setReady, scroll }) => {
         } else {
             setReady && setReady(true)
             setTimeout(() => {
-                scroll()
+                scroll && scroll()
             }, 100)
         }
     }, [currentIndex, delay, text]);
