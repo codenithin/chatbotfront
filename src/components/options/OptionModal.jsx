@@ -36,7 +36,7 @@ export const OptionModal = ({ index, currentSelected, onClick, isLast }) => {
     return (
         <li className={isLast ? last : status}>
             <div onClick={onClick} className="block whitespace-nowrap z-10">
-                <span className={isLast ? lastSpan : statusSpan}>{index + 1}</span>
+                <span className={(isLast && !selected ) ? lastSpan : statusSpan}>{index + 1}</span>
             </div>
         </li>
     )
