@@ -3,47 +3,7 @@ import ButtonGroup from '../ButtonGroup';
 import OptionModal from './OptionModal';
 import { useEffect } from 'react';
 
-const json = {
-    rfp: [
-        'Provide Notification to Vendors',
-        'Share NDA & Early Terms with Vendors',
-        'Publish RFP Portal with Vendors',
-        'Provide Timeline for Vendor Q&A',
-        'Evaluate Responses',
-        'Shortlist Vendors',
-        'Best and Final Offer Round for Shortlisted Vendors',
-        'Negotiate Contract',
-        'Close Procurement Project'
-    ],
-    rfq: [
-        'Provide Notification to Vendors',
-        'Share NDA & Early Terms with Vendors',
-        'Publish RFP Portal with Vendors',
-        'Provide Timeline for Vendor Q&A',
-        'Evaluate Responses',
-        'Shortlist Vendors',
-        'Best and Final Offer Round for Shortlisted Vendors',
-        'Negotiate Contract',
-        'Close Procurement Project'
-    ],
-    rfi: [
-        'Provide Notification to Vendors',
-        'Publish RFP Portal with Vendors',
-        'Evaluate Responses',
-        'Shortlist Vendors',
-        'Refine Requirements',
-        'Initiate RFP'
-    ],
-    ss: [
-        'Provide Notification to Vendors',
-        'Issue RFP and Terms',
-        'Best and Final Offer Round for Shortlisted Vendors',
-        'Negotiate Contract',
-        'Close Procurement Project'
-    ]
-}
-
-export default function SourcingOptions() {
+export default function SourcingOptions({options}) {
     const [modalIsOpen, setIsOpen] = useState(false);
     const [items, setItems] = useState()
     const [item, setItem] = useState()
@@ -54,7 +14,7 @@ export default function SourcingOptions() {
     }
     
     useEffect(() => {
-        setItems(json[item]);
+        setItems(options[item]);
     }, [item])
 
     function afterOpenModal() {
@@ -66,7 +26,7 @@ export default function SourcingOptions() {
             <OptionModal
                 isOpen={modalIsOpen}
                 setIsOpen={setIsOpen}
-                itemsProp={json[item]}
+                itemsProp={options[item]}
                 item={item}
             />
             <div className="grid md:grid-cols-2 gap-6 lg:gap-12">
@@ -130,9 +90,6 @@ export default function SourcingOptions() {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className='mt-5'>
-                <ButtonGroup />
             </div>
         </div>
     )

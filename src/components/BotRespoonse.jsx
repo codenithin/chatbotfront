@@ -8,6 +8,7 @@ import BASE_URL from '../config'
 import LargeText from './largeText/LargeText'
 import Chart from './charts/Chart'
 import Actions from './actions/Actions'
+import SourcingOptions from './options/SourcingOptions'
 export default function BotRespoonse({ prompt, scroll, responseRef, send, setYesMessage, scrollToBottom }) {
 
     const [botRespoonse, setBotResponse] = useState("")
@@ -88,6 +89,7 @@ export default function BotRespoonse({ prompt, scroll, responseRef, send, setYes
                             {resopnseType == 'LARGETEXT' && <LargeText setShowBottomText={setShowBottomText} text={data.largeText} scroll={scrollToBottom} />}
                             {resopnseType == 'CHART' && <Chart chartType={data.chartType} series={data.series} options={data.options} height={data.height} width={data.width} />}
                             {resopnseType == 'ACTIONS' && <Actions actions={data.actions} />}
+                            {resopnseType == 'OPTIONS' && <SourcingOptions options={data} />}
                         </div>
                         {(bottomText && showBottomText) && (
                             <div className="space-y-3 mt-10">
@@ -98,7 +100,7 @@ export default function BotRespoonse({ prompt, scroll, responseRef, send, setYes
                         )}
                     </div>
                 )}
-                <Test />
+                {/* <Test /> */}
                 <ButtonGroup />
             </div>
         </li>
