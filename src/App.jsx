@@ -62,8 +62,8 @@ function App() {
     scroll()
   }, [bubbles])
   return (
-    <div id='app' className='h-screen w-screen overflow-x-hidden overflow-y-hidden dark:bg-[#1E1E1E]'>
-      {isOpen && <div className='backdrop-blur-[1px] absolute bg-black w-full h-full bg-opacity-10 z-20' onClick={toggleSidebar}>
+    <div id='app' className='h-screen w-screen overflow-x-hidden overflow-y-hidden'>
+      {isOpen && <div className='backdrop-blur-[1px] absolute bg-black w-full h-full bg-opacity-10 ' onClick={toggleSidebar}>
 
       </div>}
       <div
@@ -71,7 +71,7 @@ function App() {
         className='fixed top-10 right-10 border p-2 rounded-full hover:bg-slate-200 cursor-pointer'>
         <svg className='w-6' xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" viewBox="0 0 24 24" role="img"><path vector-effect="non-scaling-stroke" stroke="var(--icon-color, #001e00)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.75 2.75h-14a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-14a2 2 0 00-2-2zm-3.09 0v18"></path><path vector-effect="non-scaling-stroke" stroke="var(--icon-color, #001e00)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.16 8.27l-3.91 3.48 3.91 3.48"></path></svg>
       </div>
-      <div className='z-10'>
+      <div className='z-0'>
         <Sidebar selected={'ask'} />
       </div>
       <Chat

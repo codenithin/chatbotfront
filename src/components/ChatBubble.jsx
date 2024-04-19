@@ -10,7 +10,7 @@ export default function ChatBubble({text}) {
                     </span>
 
                     <div className="grow mt-2 space-y-3">
-                        <p className="text-gray-800 dark:text-white">
+                        <p className="text-gray-800 ">
                             {text}
                         </p>
                     </div>
