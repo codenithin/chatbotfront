@@ -9,6 +9,7 @@ import LargeText from './largeText/LargeText'
 import Chart from './charts/Chart'
 import Actions from './actions/Actions'
 import SourcingOptions from './options/SourcingOptions'
+import Test from './Test'
 export default function BotRespoonse({ prompt, scroll, responseRef, send, setYesMessage, scrollToBottom }) {
 
     const [botRespoonse, setBotResponse] = useState("")
