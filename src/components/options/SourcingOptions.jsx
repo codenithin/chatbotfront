@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ButtonGroup from '../ButtonGroup';
-import OptionModal from './OptionModal';
+import OptionsModal from './OptionsModal';
 import { useEffect } from 'react';
 
 const json = {
@@ -63,7 +63,7 @@ export default function SourcingOptions() {
 
     return (
         <div className='mt-10'>
-            <OptionModal
+            <OptionsModal
                 isOpen={modalIsOpen}
                 setIsOpen={setIsOpen}
                 itemsProp={json[item]}
