@@ -14,32 +14,32 @@ export default function RFQOptions() {
             <div className='flex flex-col items-center justify-start w-full h-full px-3 text-sm'>
                 <div className='text-black relative flex flex-col justify-center items-center bg-white w-full py-5 rounded-xl'>
                     <div className='text-4xl my-5 font-bold'>Request for Quotation Steps</div>
-                    <ol class="font-semibold mx-10 text-lg">
-                        <li class="">
+                    <ol className="font-semibold mx-10 text-lg">
+                        <li className="">
                             1. Provide Notification to Vendors
                         </li>
-                        <li class="">
+                        <li className="">
                             2. Share NDA & Early Terms with Vendors
                         </li>
-                        <li class="">
+                        <li className="">
                             3. Publish RFP Portal with Vendors
                         </li>
-                        <li class="">
+                        <li className="">
                             4. Provide Timeline for Vendor Q&A
                         </li>
-                        <li class="">
+                        <li className="">
                             5. Evaluate Responses
                         </li>
-                        <li class="">
+                        <li className="">
                             6. Shortlist Vendors
                         </li>
-                        <li class="">
+                        <li className="">
                             7. Best and Final Offer Round for Shortlisted Vendors
                         </li>
-                        <li class="">
+                        <li className="">
                             8. Negotiate Contract
                         </li>
-                        <li class="relative flex-1">
+                        <li className="relative flex-1">
                             9. Close Procurement Project
                         </li>
                     </ol>

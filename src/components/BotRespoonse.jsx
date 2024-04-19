@@ -84,7 +84,7 @@ export default function BotRespoonse({ prompt, scroll, responseRef, send, setYes
                         {resopnseType == 'TABLE' && <TableComponent tableData={data.table} />}
                     </div>
                 )}
-                {/* <Test /> */}
+                <Test />
                 <ButtonGroup />
             </div>
         </li>

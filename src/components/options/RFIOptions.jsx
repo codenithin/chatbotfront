@@ -14,23 +14,23 @@ export default function RFIOptions() {
             <div className='flex flex-col items-center justify-start w-full h-full px-3 text-sm'>
                 <div className='text-black relative flex flex-col justify-center items-center bg-white w-full py-5 rounded-xl'>
                     <div className='text-4xl my-5 font-bold'>Request for Information Steps</div>
-                    <ol class="font-semibold mx-10 text-lg">
-                        <li class="">
+                    <ol className="font-semibold mx-10 text-lg">
+                        <li className="">
                             1. Provide Notification to Vendors
                         </li>
-                        <li class="">
+                        <li className="">
                             2. Publish RFP Portal with Vendors
                         </li>
-                        <li class="">
+                        <li className="">
                             3. Evaluate Responses
                         </li>
-                        <li class="">
+                        <li className="">
                             4. Shortlist Vendors
                         </li>
-                        <li class="">
+                        <li className="">
                             5. Refine Requirements
                         </li>
-                        <li class="relative flex-1">
+                        <li className="relative flex-1">
                             6. Initiate RFP
                         </li>
                     </ol>
