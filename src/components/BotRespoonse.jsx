@@ -11,7 +11,7 @@ import Actions from './actions/Actions'
 import SourcingOptions from './options/SourcingOptions'
 import Test from './Test'
 import Compare from './compare/Compare'
-export default function BotRespoonse({ prompt, scroll, responseRef, send, setYesMessage, scrollToBottom }) {
+export default function BotRespoonse({ prompt, scroll, responseRef, send, setYesMessage, scrollToBottom, yesMessage }) {
 
     const [botRespoonse, setBotResponse] = useState("")
     const [error, setError] = useState(false)
@@ -28,7 +28,8 @@ export default function BotRespoonse({ prompt, scroll, responseRef, send, setYes
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                prompt
+                prompt,
+                yesMessage
             })
         })
         const response = await res.json()
