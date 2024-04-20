@@ -37,7 +37,7 @@ export default function BotRespoonse({ prompt, scroll, responseRef, send, setYes
             setError(true)
             return
         }
-        setBotResponse(response.data.text)
+        setBotResponse(response.text)
         setData(response.data)
         setResponseType(response.data.type)
         setTo(response.data.to)
