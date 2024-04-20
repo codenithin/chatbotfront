@@ -23,19 +23,11 @@ function App() {
       }, 500)
     } else {
       if (text) {
-        if (text.toLowerCase() === "yes" && yesMessage) {
-          setBubbles(prev => [...prev, <ChatBubble key={Math.random()} text={text} />])
-          setText("")
-          setTimeout(() => {
-            setBubbles(prev => [...prev, <div ref={currentResponeRef} key={Math.random()}><BotRespoonse scrollToBottom={scrollToBottom} setYesMessage={setYesMessage} send={send} scroll={scroll} prompt={yesMessage} responseRef={responseRef} /></div>])
-          }, 500)
-        } else {
-          setBubbles(prev => [...prev, <ChatBubble key={Math.random()} text={text} />])
-          setText("")
-          setTimeout(() => {
-            setBubbles(prev => [...prev, <div ref={currentResponeRef} key={Math.random()}><BotRespoonse scrollToBottom={scrollToBottom} setYesMessage={setYesMessage} send={send} scroll={scroll} prompt={text} responseRef={responseRef} /></div>])
-          }, 500)
-        }
+        setBubbles(prev => [...prev, <ChatBubble key={Math.random()} text={text} />])
+        setText("")
+        setTimeout(() => {
+          setBubbles(prev => [...prev, <div ref={currentResponeRef} key={Math.random()}><BotRespoonse scrollToBottom={scrollToBottom} yesMessage={yesMessage} setYesMessage={setYesMessage} send={send} scroll={scroll} prompt={text} responseRef={responseRef} /></div>])
+        }, 500)
       }
     }
 
