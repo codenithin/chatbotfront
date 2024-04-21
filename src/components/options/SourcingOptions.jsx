@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ButtonGroup from '../ButtonGroup';
 import OptionsModal from './OptionsModal';
 import { useEffect } from 'react';
 
