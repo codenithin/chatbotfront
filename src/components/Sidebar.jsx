@@ -30,7 +30,7 @@ export default function Sidebar({selected}) {
                                 <path d="M5 1L10.6869 7.16086C10.8637 7.35239 10.8637 7.64761 10.6869 7.83914L5 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                             </svg>
                         </li>
-                        <li className="text-sm font-semibold text-gray-800 truncate     " aria-current="page">
+                        <li className="text-sm font-semibold text-gray-800 truncate" aria-current="page">
                             Dashboard
                         </li>
                     </ol>
@@ -39,7 +39,7 @@ export default function Sidebar({selected}) {
 
             <div id="application-sidebar" className="hs-overlay [--auto-close:lg] hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform hidden fixed top-0 start-0 bottom-0 z-[60] w-64 bg-white border-e border-gray-200 pt-7 pb-10 overflow-y-auto lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 ">
                 <div className="px-6">
-                    <a className="flex-none text-xl font-semibold   " href="#" aria-label="Brand">Triniti</a>
+                    <a className="flex-none text-3xl font-semibold   " href="#" aria-label="Brand">Triniti</a>
                 </div>
 
                 <nav className="hs-accordion-group p-6 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
@@ -60,69 +60,6 @@ export default function Sidebar({selected}) {
 
                                 <svg className="hs-accordion-active:hidden ms-auto block size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
                             </button>
-
-                            <div id="users-accordion-sub" className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden">
-                                <ul className="hs-accordion-group ps-3 pt-2" data-hs-accordion-always-open>
-                                    <li className="hs-accordion" id="users-accordion-sub-1">
-                                        <button type="button" className="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 ">
-                                            Sub Menu 1
-
-                                            <svg className="hs-accordion-active:block ms-auto hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m18 15-6-6-6 6" /></svg>
-
-                                            <svg className="hs-accordion-active:hidden ms-auto block size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
-                                        </button>
-
-                                        <div id="users-accordion-sub-1-child" className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden">
-                                            <ul className="pt-2 ps-2">
-                                                <li>
-                                                    <a className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 " href="#">
-                                                        Link 1
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 " href="#">
-                                                        Link 2
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 " href="#">
-                                                        Link 3
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li className="hs-accordion" id="users-accordion-sub-2">
-                                        <button type="button" className="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 ">
-                                            Sub Menu 2
-
-                                            <svg className="hs-accordion-active:block ms-auto hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m18 15-6-6-6 6" /></svg>
-
-                                            <svg className="hs-accordion-active:hidden ms-auto block size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
-                                        </button>
-
-                                        <div id="users-accordion-sub-2-child" className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden ps-2">
-                                            <ul className="pt-2 ps-2">
-                                                <li>
-                                                    <a className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 " href="#">
-                                                        Link 1
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 " href="#">
-                                                        Link 2
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 " href="#">
-                                                        Link 3
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
                         </li>
 
                         <li className="hs-accordion" id="account-accordion">
@@ -134,26 +71,6 @@ export default function Sidebar({selected}) {
 
                                 <svg className="hs-accordion-active:hidden ms-auto block size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
                             </button>
-
-                            <div id="account-accordion-sub" className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden">
-                                <ul className="pt-2 ps-2">
-                                    <li>
-                                        <a className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 " href="#">
-                                            Link 1
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 " href="#">
-                                            Link 2
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 " href="#">
-                                            Link 3
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                         </li>
 
                         <li className="hs-accordion" id="projects-accordion">
@@ -165,26 +82,6 @@ export default function Sidebar({selected}) {
 
                                 <svg className="hs-accordion-active:hidden ms-auto block size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
                             </button>
-
-                            <div id="projects-accordion-sub" className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden">
-                                <ul className="pt-2 ps-2">
-                                    <li>
-                                        <a className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 " href="#">
-                                            Link 1
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 " href="#">
-                                            Link 2
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 " href="#">
-                                            Link 3
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                         </li>
 
                         <li><a className="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 " href="#">
@@ -202,9 +99,9 @@ export default function Sidebar({selected}) {
                     </ul>
                 </nav>
                 <div className='fixed bottom-4 flex justify-start border-t pt-4 items-center w-full'>
-                    <img className='w-14 ml-6' src="../../149071.png" alt="" />
+                    <img className='w-14 ml-6' src="../../user-icon.png" alt="" />
                     <div className='ml-4'>
-                        <div className='text-lg font-bold'>David Harrison</div>
+                        <div className='text-lg'>David Harrison</div>
                         <div className='text-xs'>IT Sourcing Manager</div>
                     </div>
                 </div>

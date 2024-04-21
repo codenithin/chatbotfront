@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import TableComponent from './table/TableComponent'
 import ButtonGroup from './ButtonGroup'
-// import responses from './responses'
 import Typewriter from './Typewriter'
 import Form from './form/Form'
 import BASE_URL from '../config'
@@ -9,7 +8,6 @@ import LargeText from './largeText/LargeText'
 import Chart from './charts/Chart'
 import Actions from './actions/Actions'
 import SourcingOptions from './options/SourcingOptions'
-import Test from './Test'
 import Compare from './compare/Compare'
 export default function BotRespoonse({ prompt, scroll, responseRef, send, setYesMessage, scrollToBottom, yesMessage }) {
 
