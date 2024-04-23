@@ -1,7 +1,6 @@
-import React from 'react'
-import FormQuestion from './FormQuestion'
+import FormQuestionPortal from "./FormQuestionPortal";
 
-export default function Form({ questions, title }) {
+export function FormPortal({ questions, title }) {
     return (
 
         <div className="container mb-20 w-[80%] mx-auto px-4 py-8 mt-20 bg-gradient-to-tl from-[#ff8010] to-[#ff4117] rounded-2xl border shadow-md">
@@ -9,10 +8,12 @@ export default function Form({ questions, title }) {
             <div className="grid grid-cols-1 gap-4">
                 {
                     questions.map((x, i) => (
-                        <FormQuestion index={i + 1} question={x} />
+                        <FormQuestionPortal index={i + 1} question={x} />
                     ))
                 }
             </div>
         </div>
     )
 }
+
+

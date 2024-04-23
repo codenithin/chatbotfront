@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { useRef } from 'react'
-import Form from '../components/form/Form';
 import BASE_URL from '../config';
+import { FormPortal } from '../components/portal/FormPortal';
 
 
 export default function RFP() {
@@ -141,7 +141,7 @@ export default function RFP() {
             </div>
 
             <div ref={formRef}>
-                <Form questions={rfpQuestions} title={title} />
+                <FormPortal questions={rfpQuestions} title={title} />
             </div>
 
         </div>
