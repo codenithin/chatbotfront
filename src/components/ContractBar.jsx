@@ -1,13 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { OptionModalNew } from './options/OptionModalNew';
+
+const rfp = [
+    'Provide Notification to Vendors',
+    'Share NDA & Early Terms with Vendors',
+    'Publish RFP Portal with Vendors',
+    'Provide Timeline for Vendor Q&A',
+    'Evaluate Responses',
+    'Shortlist Vendors',
+    'Best and Final Offer Round for Shortlisted Vendors',
+    'Negotiate Contract',
+    'Close Procurement Project'
+]
 
 export default function ContractBar() {
+
+    const [currentSelected, setCurrentSelected] = useState(0);
+    const onClickOption = (i) => {
+        return () => {
+            setCurrentSelected(i);
+        }
+    }
+
     return (
         <div id="application-sidebar" className="
          transition-all duration-300 transform 
          hidden fixed 
-         top-20 start-[calc(100%-18rem)] bottom-0 z-[60] w-72
+         top-20 bottom-0  w-full
           bg-white border-e border-gray-200 
           pt-7 pb-10 
+          px-10
           overflow-y-auto 
           lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 
           [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 
@@ -26,7 +48,7 @@ export default function ContractBar() {
                         </div>
 
                         <div className='font-medium text-base'>
-                            Status
+                            Request For Proposal Steps
                         </div>
 
                         <div className='absolute right-5'>
@@ -36,8 +58,7 @@ export default function ContractBar() {
                         </div>
                     </div>
 
-                    <ol className=" overflow-hidden space-y-8">
-                        <li className="relative flex-1 after:content-['']  after:w-0.5 after:h-full  after:bg-[#1F57C3] after:inline-block after:absolute after:-bottom-11 after:left-4 lg:after:left-5">
+                    {/* <li className="relative flex-1 after:content-['']  after:w-0.5 after:h-full  after:bg-[#1F57C3] after:inline-block after:absolute after:-bottom-11 after:left-4 lg:after:left-5">
                             <a className="flex items-center font-medium w-full  ">
                                 <span className="w-8 h-8 bg-[#1F57C3] border-2 border-transparent rounded-full flex justify-center items-center mr-3 text-sm text-white lg:w-10 lg:h-10">
                                     <svg className="w-5 h-5 stroke-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,7 +102,14 @@ export default function ContractBar() {
                                     <h4 className="text-base  text-gray-500">Contract start</h4>
                                 </div>
                             </a>
-                        </li>
+                        </li> */}
+
+                    <ol className="space-y-8 pl-6 flex flex-col justify-start items-start pt-10 overflow-y-scroll h-[32rem] w-full">
+                        {
+                            rfp.map((x, i) => (
+                                <OptionModalNew index={i} text={x} currentSelected={currentSelected} isLast={i === (rfp.length - 1)} onClick={onClickOption(i)} />
+                            ))
+                        }
                     </ol>
                 </div>
             </div>
