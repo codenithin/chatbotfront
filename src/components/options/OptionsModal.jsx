@@ -1,7 +1,7 @@
 import React from 'react'
 import Modal from 'react-modal'
 import { useState, useEffect } from 'react'
-import { OptionModal } from './OptionModal';
+import { OptionModalNew } from './OptionModalNew';
 
 export default function OptionsModal({ isOpen, setIsOpen, item, itemsProp }) {
 
@@ -35,7 +35,7 @@ export default function OptionsModal({ isOpen, setIsOpen, item, itemsProp }) {
         <Modal
             appElement={document.getElementById('root')}
             isOpen={isOpen}
-            className={'shadow-xl h-fit left-1/2 top-[40%] \
+            className={'shadow-xl h-fit left-1/2 top-[50%] \
             absolute flex flex-col justify-center items-center text-white'}
             shouldFocusAfterRender={false}
             onRequestClose={closeModal}
@@ -47,9 +47,9 @@ export default function OptionsModal({ isOpen, setIsOpen, item, itemsProp }) {
                 }
             }}
         >
-            <div className='bg-white text-black fixed flex flex-col justify-center items-center rounded-md px-20 py-10 min-w-[60%]'>
+            <div className='bg-white text-black fixed flex flex-col justify-center items-center rounded-md py-10 min-w-[60%]'>
 
-                <div className='text-4xl font-semibold'>
+                <div className='text-4xl font-semibold pb-10'>
                     {
                         item === 'rfp' && 'Request For Proposal Steps'
                     }
@@ -64,21 +64,13 @@ export default function OptionsModal({ isOpen, setIsOpen, item, itemsProp }) {
                     }
                 </div>
 
-                <ol className="flex items-center w-full text-xs text-gray-900 font-medium pt-14 pl-[10%]">
+                <ol className="space-y-8 pl-20 flex flex-col justify-start items-start pt-10 overflow-y-scroll h-[30rem] w-full">
                     {
                         itemsProp?.map((x, i) => (
-                            <OptionModal index={i} currentSelected={currentSelected} isLast={i === (itemsProp.length - 1)} onClick={onClickOption(i)} />
+                            <OptionModalNew index={i} text={x} currentSelected={currentSelected} isLast={i === (itemsProp.length - 1)} onClick={onClickOption(i)} />
                         ))
                     }
                 </ol>
-
-                <div className='min-h-20 my-14 flex justify-center items-center '>
-                    { selectedText && 
-                        <div className='text-2xl py-5 bg-gray-50 px-10 rounded-xl border shadow'>
-                            {selectedText}
-                        </div> 
-                    }
-                </div>
             </div>
         </Modal>
     )
