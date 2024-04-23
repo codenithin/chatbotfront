@@ -45,11 +45,11 @@ export default function RFP() {
 
                 <div className="w-[50%] px-4 mx-auto select-none">
                     <div className="text-7xl font-bold font-sans pl-[25%] text-gray-800     ">
-                        Welcome <br /> to <span className='text-9xl font-semibold bg-gradient-to-br from-[#2563EB] from-35% via-[#5E4FF4] to-blue-700 inline-block text-transparent bg-clip-text'>Triniti</span>
+                        Welcome <br /> to <span className='text-9xl font-semibold bg-gradient-to-br from-[#ff4117] from-35% via-[#ff8010] to-[#ff4117] inline-block text-transparent bg-clip-text'>Triniti</span>
                     </div>
                 </div>
 
-                <div className='w-[50%] px-9 bg-gradient-to-tr from-[#5E4FF4] to-blue-700 text-white rounded-l-3xl py-8'>
+                <div className='w-[50%] px-9 bg-gradient-to-tr from-[#ff8010] to-[#ff4117] text-white rounded-l-3xl py-8'>
                     <div className='text-3xl font-semibold'>Dear Prospective Vendors</div>
                     <div className='text-xl mt-1 text-wrap'>
                         We are a leading Company in Banking and Financial services and are seeking proposals for the development and implementation of a comprehensive Talent Acquisition System.
@@ -61,7 +61,7 @@ export default function RFP() {
 
             <div className='w-full mt-10 flex justify-start items-center'>
 
-                <div className='bg-gradient-to-tr to-[#5E4FF4] from-blue-700 w-[70%] py-8 rounded-r-3xl text-white'>
+                <div className='bg-gradient-to-tr to-[#ff8010] from-[#ff4117] w-[70%] py-8 rounded-r-3xl text-white'>
                     <div className='text-3xl font-semibold pl-[20%]'>About Us</div>
                     <div className='mt-1 text-xl pl-[20%] text-pretty pr-8'>
                         We are a global company operating in 15 Countries with a headcount of 18,000 people.
@@ -71,13 +71,13 @@ export default function RFP() {
                 </div>
 
                 <div className='w-[40%] flex justify-center items-center'>
-                    <img className='w-96' src='./about-us.jpg' />
+                    <img className='w-96' src='./about-us.png' />
                 </div>
             </div>
 
             <div className='w-full mt-10 flex flex-row-reverse justify-center items-center'>
 
-                <div className='bg-gradient-to-bl from-[#5E4FF4] to-blue-700 w-[70%] py-8 rounded-l-3xl text-white'>
+                <div className='bg-gradient-to-bl from-[#ff8010] to-[#ff4117] w-[70%] py-8 rounded-l-3xl text-white'>
                     <div className='text-3xl font-semibold pl-[10%]'>Project Overview</div>
                     <div className='mt-1 text-xl pl-[10%] text-balance'>
                         The objective of this project is to procure and implement a state-of-the-art Talent Acquisition
@@ -94,7 +94,7 @@ export default function RFP() {
 
             <div className='w-full mt-10 flex justify-center items-center'>
 
-                <div className='bg-gradient-to-tr pr-32 from-[#5E4FF4] to-blue-700 w-[70%] py-8 rounded-r-3xl text-white'>
+                <div className='bg-gradient-to-tr pr-32 from-[#ff8010] to-[#ff4117] w-[70%] py-8 rounded-r-3xl text-white'>
                     <div className='text-3xl font-semibold pl-[10%]'>Scope of Work</div>
                     <div className='mt-1 text-xl w-full font-bold pl-[10%]'>
                         The selected vendor will be responsible for the following
@@ -119,14 +119,14 @@ export default function RFP() {
                 </div>
 
                 <div className='w-[30%] flex justify-center items-center'>
-                    <img className='w-72' src='./scope.jpg' />
+                    <img className='w-72' src='./scope.png' />
                 </div>
             </div>
 
 
             <div className='w-full mt-10 flex flex-row-reverse justify-center items-center'>
 
-                <div className='bg-gradient-to-bl from-[#5E4FF4] to-blue-700 w-[70%] py-8 rounded-l-3xl text-white'>
+                <div className='bg-gradient-to-bl from-[#ff8010] to-[#ff4117] w-[70%] py-8 rounded-l-3xl text-white'>
                     <div className='text-3xl font-semibold pl-[10%]'>Submission Guidelines</div>
                     <div className='mt-1 text-xl pl-[10%] text-balance'>
                         Interested vendors are invited to submit their proposals no later than Aug 2024. Proposals
