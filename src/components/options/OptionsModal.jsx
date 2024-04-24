@@ -57,7 +57,7 @@ export default function OptionsModal({ isOpen, setIsOpen, item, itemsProp }) {
                         item === 'rfi' && 'Request For Information Steps'
                     }
                     {
-                        item === 'rfq' && 'Request For Quatation Steps'
+                        item === 'rfq' && 'Request For Quotation Steps'
                     }
                     {
                         item === 'ss' && 'Sole Sourcing'
