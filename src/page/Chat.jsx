@@ -7,7 +7,7 @@ import BotRespoonse from '../components/BotRespoonse'
 export default function Chat({ bubbles, setBubbles, chatRef, text, setText, send }) {
 
     return (
-        <div className='h-full ml-64'>
+        <div className='h-full lg:ml-64'>
             <div id='chat' className="py-10 lg:py-14 h-[80%] overflow-y-scroll">
                 {/* <!-- Title --> */}
                 <div className="max-w-[95%] px-4 sm:px-6 lg:px-8 mx-auto text-center">
