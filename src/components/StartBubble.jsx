@@ -20,11 +20,11 @@ export default function StartBubble() {
                     </p>
                     <ul className="list-disc list-outside space-y-1.5 ps-3.5">
                         <li className="text-sm text-gray-800 ">
-                            List typical requirements for a sourcing software.
+                            List typical requirements for sourcing a software or services.
                         </li>
 
                         <li className="text-sm text-gray-800 ">
-                            Can you list possible vendors for a sourcing software?
+                            Can you list possible vendors for sourcing a software or services?
                         </li>
 
                         <li className="text-sm text-gray-800 ">

@@ -45,6 +45,7 @@ export const OptionModalNew = ({ index, currentSelected, text, onClick, isLast }
                     <div className="block">
                         <div className='flex flex-col'>
                             <span className={(currentSelected >= index) ? spanBlue : spanBlack}>{text}</span>
+
                         </div>
                     </div>
                 </a>
