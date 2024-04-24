@@ -9,7 +9,7 @@ import Chart from './charts/Chart'
 import Actions from './actions/Actions'
 import SourcingOptions from './options/SourcingOptions'
 import Compare from './compare/Compare'
-export default function BotRespoonse({ prompt, scroll, responseRef, send, setYesMessage, scrollToBottom, yesMessage }) {
+export default function BotRespoonse({ rfpQuestion, setRFPQuestions, prompt, scroll, responseRef, send, setYesMessage, scrollToBottom, yesMessage }) {
 
     const [botRespoonse, setBotResponse] = useState("")
     const [error, setError] = useState(false)
