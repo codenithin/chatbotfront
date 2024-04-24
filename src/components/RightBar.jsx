@@ -3,7 +3,7 @@ import ContractBar from './ContractBar';
 
 export default function RightBar({ isOpen, toggle }) {
     return (
-        <div className={`fixed p-[20px] z-30 right-0 top-0 w-[40%] h-full bg-white shadow-2xl text-black trans ${isOpen ? 'open' : 'close'}`}>
+        <div className={`fixed p-[20px] z-30 right-0 top-0 w-[50%] h-full bg-white shadow-2xl text-black trans ${isOpen ? 'open' : 'close'}`}>
             <div
                 onClick={toggle}
                 className='fixed top-5 border p-2 rounded-full hover:bg-slate-200 cursor-pointer'>
