@@ -45,7 +45,7 @@ export default function RFP() {
 
                 <div className="w-[50%] px-4 mx-auto select-none">
                     <div className="text-7xl font-bold font-sans pl-[25%] text-gray-800">
-                        Welcome <br /> to <span className='text-9xl font-semibold bg-gradient-to-br from-[#ff4117] from-35% via-[#ff8010] to-[#ff4117] inline-block text-transparent bg-clip-text'>Triniti</span>
+                        Welcome <br /> to <span className='text-9xl font-semibold bg-gradient-to-br from-[#ff4117] from-35% via-[#ff8010] to-[#ff4117] inline-block text-transparent bg-clip-text'>National Bank</span>
                     </div>
                 </div>
 

@@ -49,10 +49,10 @@ const compare = {
                   'Unlimited'
               ],
               [
-                  '500$ per user',
-                  '500$ per user',
-                  '500$ per user',
-                  '500$ per user'
+                  '230€ per user',
+                  '180€ per user',
+                  '287€ per user',
+                  '376€ per user'
               ],
               [
                   '52€',

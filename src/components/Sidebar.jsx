@@ -39,7 +39,7 @@ export default function Sidebar({selected}) {
 
             <div id="application-sidebar" className="hs-overlay [--auto-close:lg] hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform hidden fixed top-0 start-0 bottom-0 z-[60] w-64 bg-white border-e border-gray-200 pt-7 pb-10 overflow-y-auto lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 ">
                 <div className="px-6">
-                    <a className="flex-none text-3xl font-semibold   " href="#" aria-label="Brand">Triniti</a>
+                    <a className="flex-none text-3xl font-semibold   " href="#" aria-label="Brand">Nvelop</a>
                 </div>
 
                 <nav className="hs-accordion-group p-6 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
@@ -94,7 +94,7 @@ export default function Sidebar({selected}) {
                         </a></li>
                         <li><a id='ask' className="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 " href="/">
                             <svg className="flex-shrink-0 size-4 text-gray-800  " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"></path><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"></path></svg>
-                            Ask Triniti
+                            Nvelop AI
                         </a></li>
                     </ul>
                 </nav>
